@@ -1,0 +1,16 @@
+
+//Task 1: print out "AMBER" using 'O'
+System.out.println ("      O             O        O         OOOO       OOOOO      OOOO");
+System.out.println ("     O O          O   O    O   O       O   O      O          O   O");
+System.out.println ("    O   O        O     O  O     O      OOOO       OOOOO      OOOO");
+System.out.println ("   OOOOOOO      O       OO       O     O   O      O          O O");
+System.out.println ("  O       O    O                  O    OOOO       OOOOO      O  O");
+/*Task 2: Solve 6.0 x 3.5 - 1.5 x 5
+ *              -------------------
+*/                  55.6 - 30.2
+int prod1 = 6.0*3.5;
+int prod2 = 1.5*5;
+int diff = 55.6-30.2;
+int nmr = prod 1-prod2;
+int ans = nmr/diff;
+System.out.print(ans);
