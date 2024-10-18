@@ -13,10 +13,19 @@ public String extraEnd(String str)
 
 /**
  * firstTwo
- * I got most of it to work but I didn't know if I needed the if statment 
- * for the words with less than 2 characters.
+ * I got most of it to work at first but I didn't know about the if statement. I both hate and love if statments.
  **/
- 
+ public String firstTwo(String str) {
+  int length = str.length();
+  if(length > 2)
+  {
+    return str.substring(0,2);
+  }
+  else
+  {
+    return str;
+  }
+}
 
 
 //withoutEnd
