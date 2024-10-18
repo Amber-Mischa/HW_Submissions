@@ -11,20 +11,12 @@ public boolean cigarParty(int cigars, boolean isWeekend) {
   }
   else
   {
-    if(cigars >=40)
+    if(cigars >=40 && cigars <=60)
     {
-      if(cigars <=60)
-      {
       return true;
-      }
-      else
-      {
-        return false;
-      }
     }
     else
     {
-     
       return false;
     }
   }
@@ -32,45 +24,24 @@ public boolean cigarParty(int cigars, boolean isWeekend) {
 }
 
 
+
 /**
  * dateFashion
  */
 public int dateFashion(int you, int date) {
-  if(date <= 2)
+  if(date <= 2 || you <= 2)
   {
     return 0;
   }
-  else if(date >= 8)
+  else if(date >= 8 || you >= 8)
   {
-    if (you <=2)
-    {
-      return 0;
-    }
-    else
-    { 
-      return 2;
-    }
+    return 2;
   }
   else
   {
-    if(you>=8)
-    {
-      return 2;
-    }
-    else
-    {
-      if (you<=2)
-      {
-        return 0;
-      }
-      else
-      {
-        return 1;
-      }
-    }
+   return 1;
   }
 }
-
 
 
 /**
@@ -80,16 +51,9 @@ public int dateFashion(int you, int date) {
 public boolean squirrelPlay(int temp, boolean isSummer) {
   if(isSummer==false)
   {
-    if(temp>=60)
+    if(temp>=60 && temp <=90)
     {
-      if(temp<=90)
-      {
-        return true;
-      }
-      else
-      {
-        return false;
-      }
+      return true;
     }
     else
     {
@@ -98,16 +62,9 @@ public boolean squirrelPlay(int temp, boolean isSummer) {
   }
   else
   {
-    if(temp>=60)
+    if(temp>=60 && temp <=100)
     {
-      if(temp<=100)
-      {
-        return true;
-      }
-      else
-      {
-        return false;
-      }
+      return true;
     }
     else
     {
@@ -162,16 +119,13 @@ public int caughtSpeeding(int speed, boolean isBirthday) {
  */
 public int sortaSum(int a, int b) {
   int sum = a+b;
-  if (sum >=10)
+  if (sum >=10 && sum<=19)
   {
-    if(sum<=19)
-    {
-      return 20;
-    }
+   return 20;
   }
   else
   {
     return sum;
   }
-  return sum;
+}
 }
