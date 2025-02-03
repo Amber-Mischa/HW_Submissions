@@ -141,3 +141,88 @@ public int[] makeMiddle(int[] nums) {
     return newNums;
   }
 }
+
+//plusTwo
+public int[] plusTwo(int[] a, int[] b) {
+  int[] combineAB = new int[4];
+  for(int i = 0; i<2; i++)
+  {
+    combineAB[i] = a[i];
+  }
+  for(int j = 0; j<2; j++)
+  {
+    combineAB[j+2] = b[j];
+  }
+  return combineAB;
+}
+
+//swapEnds
+public int[] plusTwo(int[] a, int[] b) {
+  int[] combineAB = new int[4];
+  for(int i = 0; i<2; i++)
+  {
+    combineAB[i] = a[i];
+  }
+  for(int j = 0; j<2; j++)
+  {
+    combineAB[j+2] = b[j];
+  }
+  return combineAB;
+}
+
+//midThree
+//I have no idea how this works...
+public int[] midThree(int[] nums) {
+  int[] copyNums = nums;
+  int[] mid = new int[3];
+  int half = copyNums.length/2;
+  if(copyNums.length == 3)
+  {
+    return copyNums;
+  }
+  else
+  {
+    mid[1] = copyNums[half];
+    mid[2] = copyNums[half+1];
+    mid[0] = copyNums[half-1];
+    return mid;
+  }
+}
+
+//maxTriple
+public int maxTriple(int[] nums) {
+  int[] copyNums = nums;
+  int maxNum = 0;
+  int half = copyNums.length/2;
+  if(copyNums[0] > copyNums[copyNums.length-1] && copyNums[0] > copyNums[half])
+  {
+    maxNum = copyNums[0];
+  }
+  else if(copyNums[half] > copyNums[copyNums.length-1] && copyNums[half] > copyNums[0])
+  {
+    maxNum = copyNums[half];
+  }
+  else if(copyNums[copyNums.length-1] > copyNums[0] && copyNums[copyNums.length-1] > copyNums[half])
+  {
+    maxNum = copyNums[copyNums.length-1];
+  }
+  return maxNum;
+}
+
+//frontPiece
+public int[] frontPiece(int[] nums) {
+  int[] copyNums = nums;
+  int[] firstTwo = new int[2];
+  if(copyNums.length <=2)
+  {
+    return copyNums;
+  }
+  else
+  {
+    for(int i = 0; i <firstTwo.length; i++)
+    {
+      firstTwo[i] = copyNums[i];
+    }
+    return firstTwo;
+  }
+}
