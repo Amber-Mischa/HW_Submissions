@@ -226,3 +226,38 @@ public int[] frontPiece(int[] nums) {
     return firstTwo;
   }
 }
+
+//unlucky1
+//I hate this.
+public boolean unlucky1(int[] nums) {
+  int[] copyNums = nums;
+  boolean check = false;
+  if(copyNums.length >1)
+  {
+    for(int i = 0; i < 2; i++)
+    {
+      if(copyNums[i] == 1)
+      {
+        if(copyNums[i+1] == 3)
+        {
+          check = true;
+        }
+      }
+    }
+    if(copyNums.length > 2)
+    {
+      for(int j = copyNums.length-2; j < copyNums.length-1; j++ )
+    {
+      if(copyNums[j] == 1)
+      {
+        if(copyNums[j+1] == 3)
+        {
+          check = true;
+        }
+      }
+    }
+    }
+    
+  }  
+  return check;
+}
