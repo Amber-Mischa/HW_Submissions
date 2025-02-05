@@ -261,3 +261,55 @@ public boolean unlucky1(int[] nums) {
   }  
   return check;
 }
+
+//make2
+public int[] make2(int[] a, int[] b) {
+  int[] combineArr = new int[2];
+  int[] copyA = a;
+  int[] copyB = b;
+  if(copyA.length > 1)
+  {
+    combineArr[0] = copyA[0];
+    combineArr[1] = copyA[1];
+  }
+  else if(copyA.length == 1)
+  {
+    combineArr[0] = copyA[0];
+    combineArr[1] = copyB[0];
+  }
+  else
+  {
+    combineArr[0] = copyB[0];
+    combineArr[1] = copyB[1];
+  }
+  return combineArr;
+}
+
+//front11
+public int[] front11(int[] a, int[] b) {
+  int[] greaterArr = new int[2];
+  int[] smallerArr = new int[1];
+  int[] emptyArr = {};
+  int[] copyA = a;
+  int[] copyB = b;
+  if(copyA.length > 0 && copyB.length > 0)
+  {
+    greaterArr[0] = copyA[0];
+    greaterArr[1] = copyB[0];
+    return greaterArr;
+  }
+  else if(copyA.length < 1 && copyB.length >0)
+  {
+    smallerArr[0] = copyB[0];
+    return smallerArr;
+  }
+  else if(copyA.length>0 && copyB.length<1)
+  {
+    smallerArr[0] = copyA[0];
+    return smallerArr;
+  }
+  else
+  {
+    return emptyArr;
+  }
+}
